@@ -27,7 +27,7 @@ public class UD8ExercicesApp {
 		// ELECTRODOMESTICO
 		Electrodomestico ele = new Electrodomestico();
 		Electrodomestico ele2 = new Electrodomestico(1111.21, 50.9);
-		Electrodomestico ele3 = new Electrodomestico(50, "negro", "D", 60.4);
+		Electrodomestico ele3 = new Electrodomestico(50, "negro", "A", 60.4);
 		System.out.println("Electrodomestico 1: " + ele.toString());
 		System.out.println("Electrodomestico 2: " + ele2.toString());
 		System.out.println("Electrodomestico 3: " + ele3.toString());

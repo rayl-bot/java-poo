@@ -1,4 +1,10 @@
+enum Color{
+	BLANCO, NEGRO, AZUL, ROJO, DEFAULT();
+}
 
+enum Consum{
+	A,B,C,D,E,F;
+}
 public class Electrodomestico {
 	// contantes que se van a utilizar
 	protected static final String[] CONSUM_ENER = { "A", "B", "C", "D", "F" };
@@ -12,8 +18,8 @@ public class Electrodomestico {
 	protected double size;
 
 	public Electrodomestico() {
-		this.color = COLOR[0];
-		this.consum = CONSUM_ENER[4];
+		this.color = Color.BLANCO.toString();
+		this.consum = Consum.F.toString();
 		this.price = PRICE_BASE;
 		this.size = SIZE;
 	}
@@ -22,8 +28,8 @@ public class Electrodomestico {
 		super();
 		this.price = price;
 		this.size = size;
-		this.color = COLOR[0];
-		this.consum = CONSUM_ENER[4];
+		this.color = Color.BLANCO.toString();
+		this.consum = Consum.F.toString();
 	}
 
 	public Electrodomestico(double price, String color, String consum, double size) {
@@ -67,31 +73,33 @@ public class Electrodomestico {
 	}
 
 	public String confirmColor(String color) {
-		if (color.equalsIgnoreCase(COLOR[0]))
+		if (color.equalsIgnoreCase(Color.BLANCO.toString()))
 			return color;
-		else if (color.equalsIgnoreCase(COLOR[1]))
+		else if (color.equalsIgnoreCase(Color.NEGRO.toString()))
 			return color;
-		else if (color.equalsIgnoreCase(COLOR[2]))
+		else if (color.equalsIgnoreCase(Color.AZUL.toString()))
 			return color;
-		else if (color.equalsIgnoreCase(COLOR[3]))
+		else if (color.equalsIgnoreCase(Color.ROJO.toString()))
 			return color;
 		else
-			return COLOR[0];
+			return Color.BLANCO.toString();
 	}
 
 	public String confirmConsum(String consum) {
-		if (consum.contains(CONSUM_ENER[0]))
+		if (consum.contains(Consum.A.toString()))
 			return consum;
-		else if (consum.contains(CONSUM_ENER[1]))
+		else if (consum.contains(Consum.B.toString()))
 			return consum;
-		else if (consum.contains(CONSUM_ENER[2]))
+		else if (consum.contains(Consum.C.toString()))
 			return consum;
-		else if (consum.contains(CONSUM_ENER[3]))
+		else if (consum.contains(Consum.D.toString()))
 			return consum;
-		else if (consum.contains(CONSUM_ENER[4]))
+		else if (consum.contains(Consum.E.toString()))
+			return consum;
+		else if (consum.contains(Consum.F.toString()))
 			return consum;
 		else
-			return CONSUM_ENER[4];
+			return Consum.F.toString();
 	}
 
 	@Override
