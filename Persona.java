@@ -1,12 +1,12 @@
 
 public class Persona {
-	private String name;//Nombre
-	private int yearsOld;//Edad
-	private String dni;//DNI
-	private double size;//Peso
-	private int height;//Altura
-	private char sex;//Sexo
-	private static final char SEX_DEFAULT = 'M';//Constante sexo default
+	private String name;// Nombre
+	private int yearsOld;// Edad
+	private String dni;// DNI
+	private double size;// Peso
+	private int height;// Altura
+	private char sex;// Sexo
+	private static final char SEX_DEFAULT = 'M';// Constante sexo default
 
 	public Persona(String name, int yearsOld, char sex) {
 		this.name = name;
@@ -16,7 +16,7 @@ public class Persona {
 		this.size = 0;
 	}
 
-	//Constructor por defecto con los parametros defaults
+	// Constructor por defecto con los parametros defaults
 	public Persona() {
 		super();
 		this.name = "";
@@ -26,7 +26,7 @@ public class Persona {
 		this.sex = SEX_DEFAULT;
 	}
 
-	//Constructor por parametro de persona
+	// Constructor por parametro de persona
 	public Persona(String name, int yearsOld, String dni, double size, int height, char sex) {
 		super();
 		this.name = name;
@@ -37,7 +37,7 @@ public class Persona {
 		this.sex = sex;
 	}
 
-	//Getters y Setters
+	// Getters y Setters
 	public String getName() {
 		return name;
 	}
@@ -80,6 +80,12 @@ public class Persona {
 
 	public char getSex() {
 		return sex;
+	}
+
+	@Override
+	public String toString() {
+		return "Persona [name=" + name + ", yearsOld=" + yearsOld + ", dni=" + dni + ", size=" + size + ", height="
+				+ height + ", sex=" + sex + "]";
 	}
 
 }

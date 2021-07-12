@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Password {
-	
+
 	private int size;
 	private String password;
 
@@ -15,8 +15,8 @@ public class Password {
 		this.size = size;
 		this.password = "";
 	}
-	
-	//Getters y Setters
+
+	// Getters y Setters
 	public int getSize() {
 		return size;
 	}
@@ -29,11 +29,16 @@ public class Password {
 		Random ran = new Random();
 		char data = ' ';
 
-		for (int i=0; i<this.size; i++) {
-		  data = (char)(ran.nextInt(25)+97);
-		  this.password = data + this.password;
+		for (int i = 0; i < this.size; i++) {
+			data = (char) (ran.nextInt(25) + 97);
+			this.password = data + this.password;
 		}
-	    return this.password;
+		return this.password;
+	}
+
+	@Override
+	public String toString() {
+		return "Password [size=" + size + ", password=" + password + "]";
 	}
 
 }

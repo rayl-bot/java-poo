@@ -73,4 +73,10 @@ public class Serie {
 		this.creador = creador;
 	}
 
+	@Override
+	public String toString() {
+		return "Serie [titulo=" + titulo + ", numTemp=" + numTemp + ", entregado=" + entregado + ", genero=" + genero
+				+ ", creador=" + creador + "]";
+	}
+
 }
